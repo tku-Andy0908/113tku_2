@@ -1,4 +1,3 @@
-
 import java.util.HashMap;
 
 class Solution {
@@ -11,6 +10,7 @@ class Solution {
             }
             map.put(nums[i], i);
         }
-        return new int[]{-1, -1}; // 不會發生，因為題目保證有解
+        return new int[]{-1, -1}; 
     }
 }
+

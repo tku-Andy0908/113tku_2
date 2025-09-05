@@ -3,12 +3,12 @@ package finalexam;
 import java.io.*;
 import java.util.*;
 
-/** 題目 4：緊急通報格式括號檢查 */
+// 題目 4
 public class LC20_ValidParentheses_AlertFormat {
 
-    // 判斷括號字串是否有效
+    
     public static boolean isValid(String s) {
-        if (s == null || s.isEmpty()) return true;          // 空字串視為合法
+        if (s == null || s.isEmpty()) return true;         
         Deque<Character> st = new ArrayDeque<>();
         Map<Character, Character> pair = Map.of(
             ')', '(', ']', '[', '}', '{'
@@ -27,7 +27,7 @@ public class LC20_ValidParentheses_AlertFormat {
         return st.isEmpty();
     }
 
-    // Input: 一行括號字串；Output: true/false
+   
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = br.readLine();
@@ -36,7 +36,3 @@ public class LC20_ValidParentheses_AlertFormat {
     }
 }
 
-/*
- * Time Complexity: O(n)
- * 說明：單趟掃描，每個字元最多一次入/出棧；空間 O(n) 於最壞全開括號情況。
- */
